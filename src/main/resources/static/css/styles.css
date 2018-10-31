@@ -1,0 +1,339 @@
+/* BASE STRUCTURE */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    background-color: #010e3cf7;
+    color: #fff;
+}
+
+.main-container {
+    perspective: 2px;
+    transform-style: preserve-3d;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.section {
+    /* Needed for children to be absolutely positioned relative to the parent. */
+    position: relative;
+    /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+    height: 100vh;
+
+    /* For text formatting. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.parallax::after {
+    /* Display and position the pseudo-element */
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* Move the pseudo-element back away from the camera,
+     * then scale it back up to fill the viewport.
+     * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+    transform: translateZ(-1px) scale(1.5);
+    /* Force the background image to fill the whole element. */
+    background-size: 100%;
+    /* Keep the image from overlapping sibling elements. */
+    z-index: -1;
+}
+
+.section-static {
+    height: 50vh;
+    background-color: #010e3c;
+}
+
+.bg1::after {
+    background: #002131fa url(../img/cover-night.jpeg) no-repeat center;
+}
+
+.bg-mchistory::after {
+    background: #002131fa url(../img/mchistory.png) no-repeat center;
+}
+
+.bg-twiddler::after {
+    background: #002131fa url(../img/twiddler.png) no-repeat center;
+}
+
+.content-container {
+    position: relative;
+    display: block;
+    background-color: #010e3cf7;
+    z-index: 1;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    color: #ffffff85;
+    /* background-color: #3e717d9e; */ /* pothos theme */
+    background-color: #16366dd4; /* night theme */
+}
+.footer-text {
+    font-size: 0.8rem;
+}
+
+/* TYPOGRAPHY */
+.text-shadow-main {
+    text-shadow: 0 0.05rem 0.1rem #fff;
+}
+.text-shadow-mchistory {
+    text-shadow: 0 0.05rem 0.1rem #6f360d;
+}
+h1 { font-size: calc(3.0vw + 10px); }
+h2 { font-size: calc(2.5vw + 10px); }
+h3 { font-size: calc(2.0vw + 10px); }
+h4 { font-size: calc(1.5vw + 10px); }
+h5 { font-size: calc(1.0vw + 10px); }
+h6 { font-size: calc(0.5vw + 10px); }
+
+/* LAYOUT */
+.inline {
+    display: inline-block;
+}
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+.v-mid {
+    vertical-align: middle;
+}
+.center {
+    margin: auto;
+}
+.row {
+    margin: 0;
+    width: 100%;
+}
+.wide {
+    width: 100%;
+}
+
+/* LINKS */
+a,
+a:focus,
+a:hover {
+    color: #fff;
+}
+
+/* BUTTONS */
+.btn {
+    font-weight: 700 !important;
+    border: 2px solid #fff;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.btn-mchistory {
+    color: #6f2d00;
+    border: 2px solid #6f2d006e;
+    background-color: #daa52052;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    font-weight: bold;
+}
+.btn-mchistory:hover,
+.btn-mchistory:active,
+.btn-mchistory:focus {
+    color: #6f2d00;
+    border: 2px solid #6f2d00;
+    background-color: #daa52052;
+}
+.butt-primary {
+    color: #368c96;
+    background-color: #ffffffd4;
+    border-color: #3a929e00;
+}
+.butt-primary:hover, .butt-primary:active {
+    color: #10565f;
+    background-color: #ffffff;
+    border-color: #10565fb8;
+}
+.butt-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(19, 91, 101, 0.52);
+}
+.butt-secondary {
+    color: #ffffffc4;
+    text-shadow: none;
+    background-color: #32838f00;
+    border: .05rem solid #32839040;
+}
+.butt-secondary:hover, .butt-secondary:active {
+    color: #fff;
+    background-color: #144a52;
+    border-color: #144a52;
+}
+.butt-secondary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.38);
+}
+.btn-icon-pre {
+    width: 48px;
+    padding: 8px;
+    border-right: 2px #ffffff3b solid;
+}
+
+/* Navs */
+.navbar {
+    /* background-color: #3e717d9e; */ /* pothos theme */
+    background-color: #16366dd4; /* night theme */
+}
+.navbar-logo {
+    width: 48px;
+}
+.navbar-brand > span {
+    text-shadow: 0 0.05rem 0.1rem rgb(255, 255, 255);
+    font-size: 28px;
+}
+.nav {
+    background-color: #2cb4c763;
+    padding-left: 14px;
+}
+.navbar-toggler-icon {
+    background-image: url(../img/dropdown.png);
+}
+.dropdown-menu {
+    background-color: #3c9ab1a8;
+}
+.navbar-collapse {
+    max-width: 100%;
+}
+.nav-link:hover, .nav-link:focus {
+    background-color: #7e9ba98f;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.nav-space {
+    width: 100%;
+    height: 64px;
+}
+
+/* FORMS */
+.form-control {
+    font-weight: 600;
+    max-width: 100%;
+    color: #ffffff;
+    background-color: #ffffff73;
+}
+
+/* COVERS */
+.cover-container {
+    /* background-image: url(../res/cover2.jpg); */
+    background: no-repeat center;
+    background-size: cover;
+    height: 75px;
+}
+
+.cover {
+    background-color: #06183863;
+    box-shadow: 0 0 40px 20px #061838;
+    height: 75px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: table;
+}
+
+.bg-mchistory > .cover {
+    background-color: #e4c871e3;
+    color: #6f360d;
+    box-shadow: 0 0 40px 20px #e4c871e3;
+}
+
+.bg-twiddler > .cover {
+    background-color: #ad65c0e3;
+    color: #ffffff;
+    box-shadow: 0 0 40px 20px #ad65c0e3;
+}
+
+.cover-text {
+    display: table-cell;
+    vertical-align: middle;
+    font-style: italic;
+}
+
+/* CARDS */
+.card {
+    /* background-color: #01313c87; */ /* pothos theme */
+    background-color: #010e3cf7; /* night theme */
+    border: 0;
+}
+
+.static-mchistory > .card {
+    background-color: #f3e38c;
+    color: #6f2d00;
+    border: 2px solid goldenrod;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    font-family: FranKlein, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow: 0 0 1px #6f2d0054;
+}
+
+.static-twiddler > .card {
+
+}
+
+/* TOOL TIPS */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    background-color: #4680a57d;
+    padding: 9px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+}
+
+.fade-in-out {
+    -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: fade-in-out;
+    animation-name: fade-in-out;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-out;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border: 5px solid transparent;
+    border-top-color: #555;
+}
+
+/* ANIMATIONS */
+@keyframes fade-in-out {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
