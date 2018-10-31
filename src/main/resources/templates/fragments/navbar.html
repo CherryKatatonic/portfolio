@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top navbar-expand-lg">
+<nav class="navbar sticky-top navbar-expand-lg py-lg-0">
     <a class="navbar-brand" href="${request.contextPath}/">
         <span class="inline v-mid">Kat Grennan</span>
     </a>
@@ -10,7 +10,7 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbar">
-        <ul class="navbar-nav mr-auto text-center">
+        <!--<ul class="navbar-nav mr-auto text-center">
             <li class="nav-item">
                 <a class="nav-link" href="/">Home</a>
             </li>
@@ -20,6 +20,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="/contact">Contact</a>
             </li>
-        </ul>
+        </ul>-->
+        <nav class="nav nav-fill w-100">
+            <a class="nav-item nav-link" href="/">Home</a>
+            <a class="nav-item nav-link" href="/samples">Samples</a>
+            <a class="nav-item nav-link" href="/contact">Contact</a>
+        </nav>
     </div>
 </nav>
