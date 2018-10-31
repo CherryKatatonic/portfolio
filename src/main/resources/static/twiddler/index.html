@@ -191,7 +191,7 @@
       })
 
       
-      $(document).on('click', '.btn-block-author', function() {
+      $(document).on('click', '.btn-block-author, a.author', function() {
         $('#get-new').hide();
         var author = $(this).text();
         author = author.slice(1, author.length);
@@ -206,7 +206,7 @@
         displayTwiddles(filteredTwiddles);
       });
 
-      $(document).on('click','.btn-block-tag', function() {
+      $(document).on('click','.btn-block-tag, a.hashtag', function() {
         $('#get-new').hide();
         var tag = $(this).text();
         filteredTwiddles = filterTwiddles('tag', tag);
