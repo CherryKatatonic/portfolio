@@ -62,9 +62,11 @@ body {
 .bg-mchistory::after {
     background: #002131fa url(../img/mchistory.png) no-repeat center;
 }
-
 .bg-twiddler::after {
     background: #002131fa url(../img/twiddler.png) no-repeat center;
+}
+.bg-cisd::after {
+    background: #002131fa url(../img/cisd.png) no-repeat center;
 }
 
 .list-warning {
@@ -242,11 +244,15 @@ a:hover {
     color: #6f360d;
     box-shadow: 0 0 40px 20px #e4c871e3;
 }
-
 .bg-twiddler > .cover {
     background-color: #ad65c0e3;
     color: #ffffff;
     box-shadow: 0 0 40px 20px #ad65c0e3;
+}
+.bg-cisd > .cover {
+    background-color: #f3c029ba;
+    box-shadow: 0 0 40px 20px #f3c029ba;
+    color: #0b03aa;
 }
 
 .cover-text {
@@ -275,12 +281,38 @@ a:hover {
     font-weight: bold;
     text-shadow: 0 0 1px #6f2d0054;
 }
+.static-twiddler > .card {
+    font-weight: bold;
+    color: #545454;
+    background-color: #f9e5ff;
+    border: 2px solid #ad65c07a;
+    font-family: "Segoe UI", Arial, sans-serif;
+    text-shadow: 0 0 1px #cecece;
+}
+.static-cisd > .card {
+    font-family: 'Titillium Web', sans-serif;
+    background-color: #fff;
+    color: #212529;
+    border: 2px solid #0056b3;
+}
+
 .static-mchistory .btn {
     color: #6f2d00;
     border: 2px outset #6f2d004d;
     background-color: #daa5207d;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
+.static-twiddler .btn {
+    color: #874b96;
+    background-color: #f9e5ff;
+    border: 2px outset #ad65c07a;
+}
+.static-cisd .btn {
+    border: 2px outset #0056b3;
+    background-color: #fff;
+    color: #0056b3;
+}
+
 .static-mchistory .btn:hover,
 .static-mchistory .btn:active,
 .static-mchistory .btn:focus {
@@ -288,28 +320,26 @@ a:hover {
     border: 2px solid #6f2d00a6;
     background-color: #daa52052;
 }
-
-.static-twiddler > .card {
-    font-weight: bold;
-    color: #545454;
-    background-color: #f9e5ff;
-    border: 2px solid #ad65c07a;
-    font-family: "Segoe UI", Arial, sans-serif;
-}
-.static-twiddler .card-title {
-    color: #a258b5;
-}
-.static-twiddler .btn {
-    color: #874b96;
-    background-color: #f9e5ff;
-    border: 2px outset #ad65c07a;
-}
 .static-twiddler .btn:hover,
 .static-twiddler .btn:active,
 .static-twiddler .btn:focus {
     color: #aa5fbd;
     background-color: #ffffff;
     border: 2px solid #ad65c0b8;
+}
+.static-cisd .btn:hover,
+.static-cisd .btn:active,
+.static-cisd .btn:focus {
+    color: #fff;
+    background-color: #0056b3;
+    border: 2px solid #0056b3;
+}
+
+.static-twiddler .card-title {
+    color: #a258b5;
+}
+.static-cisd .card-title {
+    color: #0056b3;
 }
 
 /* TOOL TIPS */
