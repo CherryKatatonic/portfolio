@@ -237,6 +237,7 @@ a:hover {
     position: relative;
     z-index: 1;
     display: table;
+    transform: translateZ(0.5px) scale(.75);
 }
 
 .bg-mchistory > .cover {
@@ -267,6 +268,7 @@ a:hover {
     /* background-color: #01313c87; */ /* pothos theme */
     background-color: #010e3cf7; /* night theme */
     border: 0;
+    max-width: 90%;
 }
 .card-title {
     font-weight: bold;
@@ -291,9 +293,10 @@ a:hover {
 }
 .static-cisd > .card {
     font-family: 'Titillium Web', sans-serif;
-    background-color: #fff;
-    color: #212529;
-    border: 2px solid #0056b3;
+    background-color: #000000cc!important;
+    color: #ffffffba;
+    border: 2px solid #f3c029;
+    max-width: 75%;
 }
 
 .static-mchistory .btn {
@@ -308,9 +311,9 @@ a:hover {
     border: 2px outset #ad65c07a;
 }
 .static-cisd .btn {
-    border: 2px outset #0056b3;
-    background-color: #fff;
-    color: #0056b3;
+    border: 2px outset #f3c029;
+    background-color: #fff0;
+    color: #f3c029;
 }
 
 .static-mchistory .btn:hover,
@@ -330,17 +333,17 @@ a:hover {
 .static-cisd .btn:hover,
 .static-cisd .btn:active,
 .static-cisd .btn:focus {
-    color: #fff;
-    background-color: #0056b3;
-    border: 2px solid #0056b3;
+    color: #000000;
+    background-color: #f3c029;
+    border: 2px solid #f3c029;
 }
 
 .static-twiddler .card-title {
     color: #a258b5;
 }
-.static-cisd .card-title {
+/*.static-cisd .card-title {
     color: #0056b3;
-}
+}*/
 
 /* TOOL TIPS */
 .tooltip {
