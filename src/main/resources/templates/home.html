@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/head"></head>
+
+<body>
+    <main class="main-container">
+        <nav th:replace="fragments/navbar"></nav>
+
+        <section class="section parallax bg1">
+            <div class="cover text-center">
+                <h1 class="cover-text text-shadow-main">Let's build something beautiful.</h1>
+            </div>
+        </section>
+
+        <section class="section section-static">
+            <h1 class="cover-text text-shadow-main">Work Samples</h1>
+        </section>
+
+        <section th:replace="fragments/mchistory"></section>
+        <section th:replace="fragments/twiddler"></section>
+    </main>
+
+    <footer th:replace="fragments/bootstrap-scripts"></footer>
+</body>
+
+</html>
