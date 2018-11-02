@@ -4,27 +4,29 @@
 <head th:replace="fragments/head"></head>
 
 <body>
-    <main class="main-container parallax bg1">
+    <main class="main-container parallax">
         <nav th:replace="fragments/navbar"></nav>
 
-        <section class="section parallax bg1">
+        <section class="section parallax bg-cover" id="top">
             <div class="cover text-center">
-                <h1 class="cover-text text-shadow-main" style="font-weight: 500;">Let's build something beautiful.</h1>
+                <h1 class="cover-text text-shadow-main" style="font-weight: 500;">Let's build something beautiful</h1>
             </div>
         </section>
 
-        <section class="section section-static">
+        <section th:replace="fragments/about"></section>
+
+        <section class="section static" id="samples">
             <div class="cover text-center">
                 <h1 class="cover-text text-shadow-main">Work Samples</h1>
             </div>
         </section>
 
-        <section th:replace="fragments/mchistory"></section>
-        <section th:replace="fragments/twiddler"></section>
         <section th:replace="fragments/cisd"></section>
+        <section th:replace="fragments/twiddler"></section>
+        <section th:replace="fragments/mchistory"></section>
     </main>
 
-    <footer th:replace="fragments/bootstrap-scripts"></footer>
+    <div th:replace="fragments/global-scripts"></div>
 </body>
 
 </html>
