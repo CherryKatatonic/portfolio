@@ -10,6 +10,18 @@ body {
   color: #fff;
   scroll-behavior: smooth; }
 
+html ::-webkit-scrollbar-track, body ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: rgba(18, 45, 94, 0.8); }
+html ::-webkit-scrollbar, body ::-webkit-scrollbar {
+  width: 12px;
+  background-color: rgba(18, 45, 94, 0.8); }
+html ::-webkit-scrollbar-thumb, body ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #57728e; }
+
 hr.white {
   border-color: #ffffff3d; }
 
@@ -30,6 +42,8 @@ hr.white {
   align-items: center;
   justify-content: center;
   color: white; }
+  .section > .container-fluid {
+    max-width: 800px; }
 
 .parallax::after {
   /* Display and position the pseudo-element */
@@ -135,6 +149,18 @@ h6 {
 
 .wide {
   width: 100%; }
+
+.below-static {
+  margin-bottom: 25vh; }
+  @media only screen and (min-height: 401px) {
+    .below-static {
+      margin-top: 50vh; } }
+  @media only screen and (max-height: 400px) {
+    .below-static {
+      margin-top: 75vh; } }
+  @media only screen and (max-height: 350px) {
+    .below-static {
+      margin-top: 100vh; } }
 
 /* LINKS */
 a,
@@ -257,6 +283,9 @@ a:hover {
   z-index: 1010; }
   .card .card-title {
     font-weight: bold; }
+  .card .card-img-top {
+    width: 75%;
+    margin: 10px auto auto; }
 
 .card-about {
   margin: auto;
