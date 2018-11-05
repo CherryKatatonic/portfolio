@@ -472,3 +472,12 @@ a:hover {
   from {opacity: 0;}
   to {opacity: 1;}
 }
+
+.hover-glow:hover {
+  box-shadow: 0 0 40px 10px #ffffff87;
+  transition: box-shadow .15s ease-in-out;
+  transition-property: box-shadow;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
