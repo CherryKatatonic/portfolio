@@ -6,6 +6,7 @@ html {
 body {
   background: #002131fa url(../img/stars.jpeg) center;
   background-size: cover;
+  -webkit-transform: translateZ(-1px) scale(1);
   transform: translateZ(-1px) scale(1);
   color: #fff;
   scroll-behavior: smooth;
@@ -14,6 +15,7 @@ body {
 html, body {
   ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     border-radius: 10px;
     background-color: rgba(18, 45, 94, 0.8);
   }
@@ -26,6 +28,7 @@ html, body {
   ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: #57728e;
   }
 }
@@ -35,7 +38,9 @@ hr.white {
 }
 
 .main-container {
+  -webkit-perspective: 2px;
   perspective: 2px;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   height: 100vh;
   overflow-x: hidden;
@@ -49,8 +54,14 @@ hr.white {
   height: 100vh;
 
   /* For text formatting. */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   color: white;
 
@@ -71,18 +82,13 @@ hr.white {
   /* Move the pseudo-element back away from the camera,
    * then scale it back up to fill the viewport.
    * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+  -webkit-transform: translateZ(-1px) scale(1.5);
   transform: translateZ(-1px) scale(1.5);
   /* Force the background image to fill the whole element. */
   background-size: cover !important;
   background-position: bottom !important;
   /* Keep the image from overlapping sibling elements. */
   z-index: -1;
-}
-
-.static {
-  height: 50vh;
-  background: #002131fa url(../img/stars.jpeg) no-repeat center fixed;
-  background-size: cover;
 }
 
 .bg-cover {
@@ -183,7 +189,9 @@ a:hover {
 .btn {
   font-weight: 700 !important;
   border: 2px solid #fff;
-  -webkit-transition-duration: 0.4s; /* Safari */
+  -webkit-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 }
 
@@ -195,9 +203,13 @@ a:hover {
     padding: 2px;
     border-right: 2px solid;
     margin-right: 12px;
+    -webkit-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
     transition-duration: 0.5s;
     img, .github-svg {
       width: 100%;
+      -webkit-transition-duration: 0.5s;
+      -o-transition-duration: 0.5s;
       transition-duration: 0.5s;
     }
   }
@@ -230,7 +242,9 @@ a:hover {
 .nav-link {
   &:hover, &:focus {
     background-color: #7e9ba98f;
-    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
   }
 }
@@ -258,12 +272,14 @@ a:hover {
 
 .cover {
   background-color: #06183873;
+  -webkit-box-shadow: 0 0 40px 10px #061838;
   box-shadow: 0 0 40px 10px #061838;
   height: 75px;
   width: 100%;
   position: relative;
   z-index: 1;
   display: table;
+  -webkit-transform: translateZ(0.5px) scale(.75);
   transform: translateZ(0.5px) scale(.75);
 }
 
@@ -272,6 +288,7 @@ a:hover {
   .cover {
     background-color: #e4c871e3;
     color: #6f360d;
+    -webkit-box-shadow: 0 0 40px 20px #e4c871e3;
     box-shadow: 0 0 40px 20px #e4c871e3;
   }
 }
@@ -280,6 +297,7 @@ a:hover {
   .cover {
     background-color: #ad65c0e3;
     color: #ffffff;
+    -webkit-box-shadow: 0 0 40px 20px #ad65c0e3;
     box-shadow: 0 0 40px 20px #ad65c0e3;
   }
 }
@@ -287,6 +305,7 @@ a:hover {
   &:after { background: #002131fa url(../img/cisd.png) no-repeat center; }
   .cover {
     background-color: #f3c029ba;
+    -webkit-box-shadow: 0 0 40px 20px #f3c029ba;
     box-shadow: 0 0 40px 20px #f3c029ba;
     color: #0b03aa;
   }
@@ -295,6 +314,7 @@ a:hover {
   &:after { background: #002131fa url(../img/cover.jpg) no-repeat center; }
   .cover {
     background-color: #06183873;
+    -webkit-box-shadow: 0 0 40px 10px #061838;
     box-shadow: 0 0 40px 10px #061838;
     color: #fff;
   }
@@ -336,13 +356,21 @@ a:hover {
       height: 30vw;
       max-width: 200px;
       max-height: 200px;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
+      border-radius: 50%;
       border-radius: 50%;
       border: 10px solid rgba(76, 95, 132, 0.37);
+      -webkit-box-shadow: 0 0 40px 20px #6e8abf80;
       box-shadow: 0 0 40px 20px #6e8abf80;
     }
   }
+}
+
+.static {
+  height: 50vh;
+}
+.static-main {
+  background: #002131fa url(../img/stars.jpeg) no-repeat center fixed;
+  background-size: cover;
 }
 
 /* TODO - add .subtitle class for cards */
@@ -351,6 +379,7 @@ a:hover {
     background-color: #f3e38c;
     color: #6f2d00;
     border: 2px solid goldenrod;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     font-family: FranKlein, Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-weight: bold;
@@ -359,6 +388,7 @@ a:hover {
       color: #6f2d00;
       border: 2px outset #6f2d004d;
       background-color: #daa5207d;
+      -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       .icon-container {
         border-color: #6f2d004d;
@@ -396,6 +426,7 @@ a:hover {
       color: #874b96;
       background-color: #f9e5ff;
       border: 2px outset #ad65c07a;
+      -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       .icon-container {
         border-color: #ad65c07a;
@@ -432,6 +463,7 @@ a:hover {
       border: 2px outset #f3c029;
       background-color: #fff0;
       color: #f3c029;
+      -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       .icon-container {
         border-color: #f3c029;
@@ -459,6 +491,7 @@ a:hover {
     background-color: #010e3cf7; /* night theme */
     border: 2px outset #7e9ba98f;
     color: #fff;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     text-shadow: 0 0 1px #7e9ba98f;
     .card-title {
@@ -473,6 +506,7 @@ a:hover {
       color: #fff;
       border: 2px outset #7e9ba98f;
       background-color: #7e9ba91c;
+      -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       .icon-container {
         border-color: #7e9ba959;
@@ -491,6 +525,13 @@ a:hover {
         }
       }
     }
+  }
+}
+
+#contact {
+  .btn {
+    background-color: #010e3ca8;
+    color: #fff;
   }
 }
 
@@ -523,6 +564,8 @@ a:hover {
     left: 50%;
     margin-left: -75px;
     opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
     transition: opacity 0.3s;
     &:after {
       content: "";
@@ -537,16 +580,25 @@ a:hover {
 }
 
 .fade-in-out {
-  -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
   -webkit-animation-name: fade-in-out;
   animation-name: fade-in-out;
+  animation-name: fade-in-out;
   animation-duration: 0.5s;
+  -webkit-animation-direction: alternate;
   animation-direction: alternate;
+  -webkit-animation-iteration-count: 2;
   animation-iteration-count: 2;
+  -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
 }
 
 /* ANIMATIONS */
+@-webkit-keyframes fade-in-out {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 @keyframes fade-in-out {
   from {opacity: 0;}
   to {opacity: 1;}
@@ -554,9 +606,18 @@ a:hover {
 
 .hover-glow:hover {
   text-decoration: none;
+  -webkit-box-shadow: 0 0 40px 10px #ffffff87;
   box-shadow: 0 0 40px 10px #ffffff87;
   background-color: #ffffff69;
+  -webkit-transition-property: background-color, -webkit-box-shadow;
+  transition-property: background-color, -webkit-box-shadow;
+  -o-transition-property: box-shadow, background-color;
   transition-property: box-shadow, background-color;
+  transition-property: box-shadow, background-color, -webkit-box-shadow;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
