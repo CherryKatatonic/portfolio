@@ -178,12 +178,16 @@ a:hover {
 
 .icon-btn {
   padding: 0 12px 0 0; }
-  .icon-btn img.icon {
+  .icon-btn .icon-container {
+    display: inline-block;
     width: 48px;
-    padding: 1px 0 1px 1px;
+    padding: 2px;
     border-right: 2px solid;
     margin-right: 12px;
     transition-duration: 0.5s; }
+    .icon-btn .icon-container img, .icon-btn .icon-container .github-svg {
+      width: 100%;
+      transition-duration: 0.5s; }
 
 /* Navs */
 .navbar {
@@ -266,6 +270,13 @@ a:hover {
   box-shadow: 0 0 40px 20px #f3c029ba;
   color: #0b03aa; }
 
+.bg-portfolio:after {
+  background: #002131fa url(../img/cover.jpg) no-repeat center; }
+.bg-portfolio .cover {
+  background-color: #06183873;
+  box-shadow: 0 0 40px 10px #061838;
+  color: #fff; }
+
 .cover-text {
   display: table-cell;
   vertical-align: middle;
@@ -314,19 +325,23 @@ a:hover {
   font-family: FranKlein, Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: bold;
   text-shadow: 0 0 1px #6f2d0054; }
-.static-mchistory .btn {
-  color: #6f2d00;
-  border: 2px outset #6f2d004d;
-  background-color: #daa5207d;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
-  .static-mchistory .btn:hover, .static-mchistory .btn:active, .static-mchistory .btn:focus {
-    color: #6f2d00cf;
-    border: 2px solid #6f2d00a6;
-    background-color: #ecdf96; }
-    .static-mchistory .btn:hover .icon, .static-mchistory .btn:active .icon, .static-mchistory .btn:focus .icon {
-      border-color: #6f2d00a6; }
-  .static-mchistory .btn .icon {
-    border-color: #6f2d004d; }
+  .static-mchistory .card .btn {
+    color: #6f2d00;
+    border: 2px outset #6f2d004d;
+    background-color: #daa5207d;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+    .static-mchistory .card .btn .icon-container {
+      border-color: #6f2d004d; }
+      .static-mchistory .card .btn .icon-container .github-svg {
+        fill: #6f2d00; }
+    .static-mchistory .card .btn:hover, .static-mchistory .card .btn:active, .static-mchistory .card .btn:focus {
+      color: #6f2d00cf;
+      border: 2px solid #6f2d00a6;
+      background-color: #ecdf96; }
+      .static-mchistory .card .btn:hover .icon-container, .static-mchistory .card .btn:active .icon-container, .static-mchistory .card .btn:focus .icon-container {
+        border-color: #6f2d00a6; }
+        .static-mchistory .card .btn:hover .icon-container .github-svg, .static-mchistory .card .btn:active .icon-container .github-svg, .static-mchistory .card .btn:focus .icon-container .github-svg {
+          fill: #6f2d00cf; }
 
 .static-twiddler .card {
   font-weight: bold;
@@ -335,21 +350,25 @@ a:hover {
   border: 2px solid #ad65c07a;
   font-family: "Segoe UI", Arial, sans-serif;
   text-shadow: 0 0 1px #cecece; }
-.static-twiddler .card-title {
-  color: #a258b5; }
-.static-twiddler .btn {
-  color: #874b96;
-  background-color: #f9e5ff;
-  border: 2px outset #ad65c07a;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
-  .static-twiddler .btn:hover, .static-twiddler .btn:active, .static-twiddler .btn:focus {
-    color: #fff;
-    background-color: #ad65c0;
-    border: 2px solid #874b96; }
-    .static-twiddler .btn:hover .icon, .static-twiddler .btn:active .icon, .static-twiddler .btn:focus .icon {
-      border-color: #874b96; }
-  .static-twiddler .btn .icon {
-    border-color: #ad65c07a; }
+  .static-twiddler .card .card-title {
+    color: #a258b5; }
+  .static-twiddler .card .btn {
+    color: #874b96;
+    background-color: #f9e5ff;
+    border: 2px outset #ad65c07a;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+    .static-twiddler .card .btn .icon-container {
+      border-color: #ad65c07a; }
+      .static-twiddler .card .btn .icon-container .github-svg {
+        fill: #874b96; }
+    .static-twiddler .card .btn:hover, .static-twiddler .card .btn:active, .static-twiddler .card .btn:focus {
+      color: #fff;
+      background-color: #ad65c0;
+      border: 2px solid #874b96; }
+      .static-twiddler .card .btn:hover .icon-container, .static-twiddler .card .btn:active .icon-container, .static-twiddler .card .btn:focus .icon-container {
+        border-color: #fff; }
+        .static-twiddler .card .btn:hover .icon-container .github-svg, .static-twiddler .card .btn:active .icon-container .github-svg, .static-twiddler .card .btn:focus .icon-container .github-svg {
+          fill: #fff; }
 
 .static-cisd .card {
   font-family: 'Titillium Web', sans-serif;
@@ -357,21 +376,61 @@ a:hover {
   color: #ffffffba;
   border: 2px solid #f3c029;
   max-width: 75%; }
-.static-cisd .card-title {
-  color: #f3c029e8; }
-.static-cisd .btn {
-  border: 2px outset #f3c029;
-  background-color: #fff0;
-  color: #f3c029;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
-  .static-cisd .btn:hover, .static-cisd .btn:active, .static-cisd .btn:focus {
-    color: #000000;
-    background-color: #f3c029;
-    border: 2px solid #f3c029; }
-    .static-cisd .btn:hover .icon, .static-cisd .btn:active .icon, .static-cisd .btn:focus .icon {
+  .static-cisd .card .card-title {
+    color: #f3c029e8; }
+  .static-cisd .card .btn {
+    border: 2px outset #f3c029;
+    background-color: #fff0;
+    color: #f3c029;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+    .static-cisd .card .btn .icon-container {
       border-color: #f3c029; }
-  .static-cisd .btn .icon {
-    border-color: #f3c029; }
+      .static-cisd .card .btn .icon-container .github-svg {
+        fill: #f3c029; }
+    .static-cisd .card .btn:hover, .static-cisd .card .btn:active, .static-cisd .card .btn:focus {
+      color: #000000;
+      background-color: #f3c029;
+      border: 2px solid #f3c029; }
+      .static-cisd .card .btn:hover .icon-container, .static-cisd .card .btn:active .icon-container, .static-cisd .card .btn:focus .icon-container {
+        border-color: #000; }
+        .static-cisd .card .btn:hover .icon-container .github-svg, .static-cisd .card .btn:active .icon-container .github-svg, .static-cisd .card .btn:focus .icon-container .github-svg {
+          fill: #000; }
+
+.static-portfolio .card {
+  background-color: #010e3cf7;
+  /* night theme */
+  border: 2px outset #7e9ba98f;
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  text-shadow: 0 0 1px #7e9ba98f; }
+  .static-portfolio .card .card-title {
+    border-bottom: 2px solid #ffffff85;
+    font-style: italic;
+    font-weight: normal; }
+  .static-portfolio .card .card-footer {
+    border-top: 2px solid #ffffff85; }
+  .static-portfolio .card .btn {
+    color: #fff;
+    border: 2px outset #7e9ba98f;
+    background-color: #7e9ba91c;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+    .static-portfolio .card .btn .icon-container {
+      border-color: #7e9ba959; }
+      .static-portfolio .card .btn .icon-container .github-svg {
+        fill: #fff; }
+    .static-portfolio .card .btn:hover, .static-portfolio .card .btn:active, .static-portfolio .card .btn:focus {
+      border-color: #d8e0e48f;
+      background-color: #7e9ba95e; }
+      .static-portfolio .card .btn:hover .icon-container, .static-portfolio .card .btn:active .icon-container, .static-portfolio .card .btn:focus .icon-container {
+        border-color: #d8e0e48f; }
+        .static-portfolio .card .btn:hover .icon-container .github-svg, .static-portfolio .card .btn:active .icon-container .github-svg, .static-portfolio .card .btn:focus .icon-container .github-svg {
+          fill: #fff; }
+
+.svg-alt {
+  display: none; }
+
+.no-svg .svg-alt {
+  display: block; }
 
 /* TOOL TIPS */
 .tooltip {
@@ -422,11 +481,11 @@ a:hover {
   to {
     opacity: 1; } }
 .hover-glow:hover {
+  text-decoration: none;
   box-shadow: 0 0 40px 10px #ffffff87;
-  transition: box-shadow .15s ease-in-out;
-  transition-property: box-shadow;
-  transition-duration: 0.15s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s; }
+  background-color: #ffffff69;
+  transition-property: box-shadow, background-color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out; }
 
 /*# sourceMappingURL=styles.css.map */

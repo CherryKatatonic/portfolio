@@ -189,12 +189,17 @@ a:hover {
 
 .icon-btn {
   padding: 0 12px 0 0;
-  img.icon {
+  .icon-container {
+    display: inline-block;
     width: 48px;
-    padding: 1px 0 1px 1px;
+    padding: 2px;
     border-right: 2px solid;
     margin-right: 12px;
     transition-duration: 0.5s;
+    img, .github-svg {
+      width: 100%;
+      transition-duration: 0.5s;
+    }
   }
 }
 
@@ -286,6 +291,14 @@ a:hover {
     color: #0b03aa;
   }
 }
+.bg-portfolio {
+  &:after { background: #002131fa url(../img/cover.jpg) no-repeat center; }
+  .cover {
+    background-color: #06183873;
+    box-shadow: 0 0 40px 10px #061838;
+    color: #fff;
+  }
+}
 
 .cover-text {
   display: table-cell;
@@ -341,22 +354,28 @@ a:hover {
     font-family: FranKlein, Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-weight: bold;
     text-shadow: 0 0 1px #6f2d0054;
-  }
-  .btn {
-    color: #6f2d00;
-    border: 2px outset #6f2d004d;
-    background-color: #daa5207d;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    &:hover, &:active, &:focus {
-      color: #6f2d00cf;
-      border: 2px solid #6f2d00a6;
-      background-color: #ecdf96;
-      .icon {
-        border-color: #6f2d00a6;
+    .btn {
+      color: #6f2d00;
+      border: 2px outset #6f2d004d;
+      background-color: #daa5207d;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      .icon-container {
+        border-color: #6f2d004d;
+        .github-svg {
+          fill: #6f2d00;
+        }
       }
-    }
-    .icon {
-      border-color: #6f2d004d;
+      &:hover, &:active, &:focus {
+        color: #6f2d00cf;
+        border: 2px solid #6f2d00a6;
+        background-color: #ecdf96;
+        .icon-container {
+          border-color: #6f2d00a6;
+          .github-svg {
+            fill: #6f2d00cf;
+          }
+        }
+      }
     }
   }
 }
@@ -369,25 +388,31 @@ a:hover {
     border: 2px solid #ad65c07a;
     font-family: "Segoe UI", Arial, sans-serif;
     text-shadow: 0 0 1px #cecece;
-  }
-  .card-title {
-    color: #a258b5;
-  }
-  .btn {
-    color: #874b96;
-    background-color: #f9e5ff;
-    border: 2px outset #ad65c07a;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    &:hover, &:active, &:focus {
-      color: #fff;
-      background-color: #ad65c0;
-      border: 2px solid #874b96;
-      .icon {
-        border-color: #874b96;
-      }
+    .card-title {
+      color: #a258b5;
     }
-    .icon {
-      border-color: #ad65c07a;
+    .btn {
+      color: #874b96;
+      background-color: #f9e5ff;
+      border: 2px outset #ad65c07a;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      .icon-container {
+        border-color: #ad65c07a;
+        .github-svg {
+          fill: #874b96;
+        }
+      }
+      &:hover, &:active, &:focus {
+        color: #fff;
+        background-color: #ad65c0;
+        border: 2px solid #874b96;
+        .icon-container {
+          border-color: #fff;
+          .github-svg {
+            fill: #fff;
+          }
+        }
+      }
     }
   }
 }
@@ -399,27 +424,80 @@ a:hover {
     color: #ffffffba;
     border: 2px solid #f3c029;
     max-width: 75%;
-  }
-  .card-title {
-    color: #f3c029e8;
-  }
-  .btn {
-    border: 2px outset #f3c029;
-    background-color: #fff0;
-    color: #f3c029;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    &:hover, &:active, &:focus {
-      color: #000000;
-      background-color: #f3c029;
-      border: 2px solid #f3c029;
-      .icon {
+    .card-title {
+      color: #f3c029e8;
+    }
+    .btn {
+      border: 2px outset #f3c029;
+      background-color: #fff0;
+      color: #f3c029;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      .icon-container {
         border-color: #f3c029;
+        .github-svg {
+          fill: #f3c029;
+        }
+      }
+      &:hover, &:active, &:focus {
+        color: #000000;
+        background-color: #f3c029;
+        border: 2px solid #f3c029;
+        .icon-container {
+          border-color: #000;
+          .github-svg {
+            fill: #000;
+          }
+        }
       }
     }
-    .icon {
-      border-color: #f3c029;
+  }
+}
+
+.static-portfolio {
+  .card {
+    background-color: #010e3cf7; /* night theme */
+    border: 2px outset #7e9ba98f;
+    color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    text-shadow: 0 0 1px #7e9ba98f;
+    .card-title {
+      border-bottom: 2px solid #ffffff85;
+      font-style: italic;
+      font-weight: normal;
+    }
+    .card-footer {
+      border-top: 2px solid #ffffff85;
+    }
+    .btn {
+      color: #fff;
+      border: 2px outset #7e9ba98f;
+      background-color: #7e9ba91c;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      .icon-container {
+        border-color: #7e9ba959;
+        .github-svg {
+          fill: #fff;
+        }
+      }
+      &:hover, &:active, &:focus {
+        border-color: #d8e0e48f;
+        background-color: #7e9ba95e;
+        .icon-container {
+          border-color: #d8e0e48f;
+          .github-svg {
+            fill: #fff;
+          }
+        }
+      }
     }
   }
+}
+
+.svg-alt {
+  display: none;
+}
+.no-svg .svg-alt {
+  display: block;
 }
 
 /* TOOL TIPS */
@@ -474,10 +552,10 @@ a:hover {
 }
 
 .hover-glow:hover {
+  text-decoration: none;
   box-shadow: 0 0 40px 10px #ffffff87;
-  transition: box-shadow .15s ease-in-out;
-  transition-property: box-shadow;
-  transition-duration: 0.15s;
+  background-color: #ffffff69;
+  transition-property: box-shadow, background-color;
+  transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
-  transition-delay: 0s;
 }
