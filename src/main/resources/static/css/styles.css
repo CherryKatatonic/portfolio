@@ -441,6 +441,9 @@ a:hover {
     border-bottom: 2px solid #ffffff85;
     font-style: italic;
     font-weight: normal; }
+  .static-portfolio .card .subtitle {
+    font-weight: normal;
+    font-style: italic; }
   .static-portfolio .card .card-footer {
     border-top: 2px solid #ffffff85; }
   .static-portfolio .card .btn {
