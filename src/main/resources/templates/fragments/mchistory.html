@@ -1,3 +1,5 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <section class="section parallax bg-mchistory">
     <div class="cover text-center">
         <h1 class="cover-text text-shadow-mchistory">MCHistory.net</h1>
@@ -29,7 +31,17 @@
         </div>
         <div class="card-footer text-center" style="border-top: 2px solid #6f2d0085;">
             <a href="https://mchistory.net" target="_blank" class="btn icon-btn">
-                <img class="icon" src="img/mchistory-icon.png">Visit mchistory.net
+                <div class="icon-container">
+                    <img src="img/mchistory-icon.png">
+                </div>
+                Visit mchistory.net
+            </a>
+            <a href="https://github.com/CherryKatatonic/mchistory" target="_blank" class="btn icon-btn">
+                <div class="icon-container">
+                    <svg th:replace="fragments/vectors :: github"></svg>
+                    <img class="svg-alt" src="img/github.svg">
+                </div>
+                Code Repo
             </a>
         </div>
     </div>

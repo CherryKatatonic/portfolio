@@ -1,3 +1,5 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <section class="section parallax bg-cisd">
     <div class="cover text-center">
         <h1 class="cover-text text-shadow-cisd">CISD.org</h1>
@@ -17,9 +19,8 @@
                     <li>All of the features and technologies of MC History</li>
                     <li>Built with WAI-ARIA accessibility standards in mind</li>
                     <li>Custom iCalendar API built with Biweekly(Java) and FullCalendar(JavaScript)</li>
-                    <li>Built with intention of using Spring framework and Thymeleaf templating engine to provide
-                    admins with ability to create/edit/delete entire pages and customize their layouts and contents
-                    with a wide array of templates and template fragments</li>
+                    <li>The current cisd.org uses a templating engine enabling site admins to create/edit/delete
+                    pages and page contents on the site. I intend to implement this with Spring and Thymeleaf.</li>
                     <li class="list-warning">This website is still under construction. It's a large and complex
                     project that will take time to complete.</li>
                 </ul>
@@ -27,10 +28,23 @@
         </div>
         <div class="card-footer text-center" style="border-top: 2px solid #f3c02994;">
             <a href="https://cisd.org" target="_blank" class="btn icon-btn">
-                <img class="icon" src="img/blackboard-icon.png">See the current cisd.org
+                <div class="icon-container">
+                    <img src="img/blackboard-icon.png">
+                </div>
+                See the current cisd.org
             </a>
             <a href="https://cisd.kat-grennan.com" target="_blank" class="btn icon-btn">
-                <img class="icon" src="img/cisd-icon.png">See my prototype
+                <div class="icon-container">
+                    <img src="img/cisd-icon.png">
+                </div>
+                See my prototype
+            </a>
+            <a href="https://github.com/CherryKatatonic/cisd" target="_blank" class="btn icon-btn">
+                <div class="icon-container">
+                    <svg th:replace="fragments/vectors :: github"></svg>
+                    <img class="svg-alt" src="img/github.svg">
+                </div>
+                Code Repo
             </a>
         </div>
     </div>
