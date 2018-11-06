@@ -1,26 +1,34 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <section class="section parallax bg-portfolio">
     <div class="cover text-center">
-        <h1 class="cover-text text-shadow-portfolio">and of course...</h1>
+        <h1 class="cover-text text-shadow-main">and of course...</h1>
     </div>
 </section>
 
 <section class="section static-portfolio" style="height: 25vh;">
     <div class="card">
         <div class="card-body">
-            <h4 class="card-title text-center pb-1" style="border-bottom: 2px solid #6f2d0085;">
+            <h4 class="card-title text-center pb-1">
                 Kat-Grennan.com
             </h4>
             <div class="card-text">
-                <h5 class="text-center font-weight-bold">My webdev/coding portfolio</h5>
+                <h5 class="text-center">My webdev/coding portfolio</h5>
                 <ul>
-                    <li>Features parallax scrolling</li>
-                    <li>Built with Spring Boot and Thymeleaf</li>
+                    <li>Parallax scrolling</li>
+                    <li>Spring Boot</li>
+                    <li>Thymeleaf</li>
+                    <li>Sass</li>
                 </ul>
             </div>
         </div>
-        <div class="card-footer text-center" style="border-top: 2px solid #6f2d0085;">
+        <div class="card-footer text-center">
             <a href="https://github.com/CherryKatatonic/portfolio" target="_blank" class="btn icon-btn">
-                <img class="icon" src="img/github.svg">Code Repo
+                <div class="icon-container">
+                    <svg th:replace="fragments/vectors :: github"></svg>
+                    <img class="svg-alt" src="img/github.svg">
+                </div>
+                Code Repo
             </a>
         </div>
     </div>
