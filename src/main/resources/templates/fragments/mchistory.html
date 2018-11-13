@@ -1,50 +1,50 @@
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div xmlns:th="http://www.thymeleaf.org">
+    <section class="section parallax bg-mchistory">
+        <div class="cover text-center">
+            <h1 class="cover-text text-shadow-mchistory">MCHistory.net</h1>
+        </div>
+    </section>
 
-<section class="section parallax bg-mchistory">
-    <div class="cover text-center">
-        <h1 class="cover-text text-shadow-mchistory">MCHistory.net</h1>
-    </div>
-</section>
-
-<section class="section static static-mchistory">
-    <div class="card">
-        <div class="card-body">
-            <h4 class="card-title text-center pb-1" style="border-bottom: 2px solid #6f2d0085;">
-                Mitchell County Historical Society
-            </h4>
-            <div class="card-text">
-                <h5 class="text-center font-weight-normal font-italic">My first web development project</h5>
-                <p class="font-weight-bold mb-0">Some of the technologies/features of the site include:</p>
-                <ul>
-                    <li>Responsive UI for mobile browsing</li>
-                    <li>Google Datastore API for database operations</li>
-                    <li>Google Storage API for file storage/serving</li>
-                    <li>Google Domains for domain registration and DNS configuration</li>
-                    <li>Mailgun email API for user email verification, tech support requests, password recovery</li>
-                    <li>Vultr for server hosting</li>
-                    <li>Ability for users to create accounts, edit profile</li>
-                    <li>Ability for admin users to create/edit/delete content on the site</li>
-                    <li class="list-warning">Needs a few bug fixes. Upon first visiting the site, you might
-                    have to reload the page to fetch styles.css</li>
-                </ul>
+    <section class="section static static-mchistory">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title text-center pb-1" style="border-bottom: 2px solid #6f2d0085;">
+                    Mitchell County Historical Society
+                </h4>
+                <div class="card-text">
+                    <h5 class="text-center font-weight-normal font-italic">My first web development project</h5>
+                    <p class="font-weight-bold mb-0">Some of the technologies/features of the site include:</p>
+                    <ul>
+                        <li>Responsive UI for mobile browsing</li>
+                        <li>Google Datastore API for database operations</li>
+                        <li>Google Storage API for file storage/serving</li>
+                        <li>Google Domains for domain registration and DNS configuration</li>
+                        <li>Mailgun email API for user email verification, tech support requests, password recovery</li>
+                        <li>Vultr for server hosting</li>
+                        <li>Ability for users to create accounts, edit profile</li>
+                        <li>Ability for admin users to create/edit/delete content on the site</li>
+                        <li class="list-warning">Needs a few bug fixes. Upon first visiting the site, you might
+                            have to reload the page to fetch styles.css</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-footer" style="border-top: 2px solid #6f2d0085;">
+                <div class="row justify-content-center">
+                    <a href="https://mchistory.net" target="_blank" class="btn icon-btn col-auto m-1">
+                        <div class="icon-container">
+                            <img src="img/mchistory-icon.png">
+                        </div>
+                        Visit mchistory.net
+                    </a>
+                    <a href="https://github.com/CherryKatatonic/mchistory" target="_blank" class="btn icon-btn col-auto m-1">
+                        <div class="icon-container">
+                            <svg th:replace="fragments/vectors :: github"></svg>
+                            <img class="svg-alt" src="img/github.svg">
+                        </div>
+                        Code Repo
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="card-footer" style="border-top: 2px solid #6f2d0085;">
-            <div class="row justify-content-center">
-                <a href="https://mchistory.net" target="_blank" class="btn icon-btn col-auto m-1">
-                    <div class="icon-container">
-                        <img src="img/mchistory-icon.png">
-                    </div>
-                    Visit mchistory.net
-                </a>
-                <a href="https://github.com/CherryKatatonic/mchistory" target="_blank" class="btn icon-btn col-auto m-1">
-                    <div class="icon-container">
-                        <svg th:replace="fragments/vectors :: github"></svg>
-                        <img class="svg-alt" src="img/github.svg">
-                    </div>
-                    Code Repo
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
+</div>

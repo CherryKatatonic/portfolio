@@ -1,37 +1,37 @@
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div xmlns:th="http://www.thymeleaf.org">
+    <section class="section parallax bg-portfolio">
+        <div class="cover text-center">
+            <h1 class="cover-text text-shadow-main">and of course...</h1>
+        </div>
+    </section>
 
-<section class="section parallax bg-portfolio">
-    <div class="cover text-center">
-        <h1 class="cover-text text-shadow-main">and of course...</h1>
-    </div>
-</section>
-
-<section class="section static static-portfolio" style="height: 25vh;">
-    <div class="card">
-        <div class="card-body">
-            <h4 class="card-title text-center pb-1">
-                Kat-Grennan.com
-            </h4>
-            <div class="card-text">
-                <h5 class="subtitle text-center">My webdev/coding portfolio</h5>
-                <ul>
-                    <li>Parallax scrolling</li>
-                    <li>Spring Boot</li>
-                    <li>Thymeleaf</li>
-                    <li>Sass</li>
-                </ul>
+    <section class="section static static-portfolio" style="height: 25vh;">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title text-center pb-1">
+                    Kat-Grennan.com
+                </h4>
+                <div class="card-text">
+                    <h5 class="subtitle text-center">My webdev/coding portfolio</h5>
+                    <ul>
+                        <li>Parallax scrolling</li>
+                        <li>Spring Boot</li>
+                        <li>Thymeleaf</li>
+                        <li>Sass</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row justify-content-center">
+                    <a href="https://github.com/CherryKatatonic/portfolio" target="_blank" class="btn icon-btn col-auto m-1">
+                        <div class="icon-container">
+                            <svg th:replace="fragments/vectors :: github"></svg>
+                            <img class="svg-alt" src="img/github.svg">
+                        </div>
+                        Code Repo
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="card-footer">
-            <div class="row justify-content-center">
-                <a href="https://github.com/CherryKatatonic/portfolio" target="_blank" class="btn icon-btn col-auto m-1">
-                    <div class="icon-container">
-                        <svg th:replace="fragments/vectors :: github"></svg>
-                        <img class="svg-alt" src="img/github.svg">
-                    </div>
-                    Code Repo
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
+</div>
