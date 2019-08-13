@@ -4,6 +4,7 @@ html {
   min-height: 100%; }
 
 body {
+  height: 100%;
   background: #002131fa url(../img/stars.jpeg) center;
   background-size: cover;
   -webkit-transform: translateZ(-1px) scale(1);
@@ -158,7 +159,8 @@ h6 {
   width: 100%; }
 
 .below-static {
-  margin-bottom: 25vh; }
+  margin-bottom: 25vh;
+}
   @media only screen and (min-height: 401px) {
     .below-static {
       margin-top: 50vh; } }
@@ -534,11 +536,8 @@ a:hover {
     opacity: 0; }
   to {
     opacity: 1; } }
-.hover-glow:hover {
-  text-decoration: none;
-  -webkit-box-shadow: 0 0 40px 10px #ffffff87;
-  box-shadow: 0 0 40px 10px #ffffff87;
-  background-color: #ffffff69;
+
+.hover-glow {
   -webkit-transition-property: background-color, -webkit-box-shadow;
   transition-property: background-color, -webkit-box-shadow;
   -o-transition-property: box-shadow, background-color;
@@ -549,6 +548,13 @@ a:hover {
   transition-duration: 0.5s;
   -webkit-transition-timing-function: ease-in-out;
   -o-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out; }
+  transition-timing-function: ease-in-out;
+}
+.hover-glow:hover {
+  text-decoration: none;
+  -webkit-box-shadow: 0 0 40px 10px #ffffff87;
+  box-shadow: 0 0 40px 10px #ffffff87;
+  background-color: #ffffff69;
+}
 
 /*# sourceMappingURL=styles.css.map */

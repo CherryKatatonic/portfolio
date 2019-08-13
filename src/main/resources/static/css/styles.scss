@@ -4,6 +4,7 @@ html {
   min-height: 100%;
 }
 body {
+  height: 100%;
   background: #002131fa url(../img/stars.jpeg) center;
   background-size: cover;
   -webkit-transform: translateZ(-1px) scale(1);
@@ -608,11 +609,7 @@ a:hover {
   to {opacity: 1;}
 }
 
-.hover-glow:hover {
-  text-decoration: none;
-  -webkit-box-shadow: 0 0 40px 10px #ffffff87;
-  box-shadow: 0 0 40px 10px #ffffff87;
-  background-color: #ffffff69;
+.hover-glow {
   -webkit-transition-property: background-color, -webkit-box-shadow;
   transition-property: background-color, -webkit-box-shadow;
   -o-transition-property: box-shadow, background-color;
@@ -624,4 +621,10 @@ a:hover {
   -webkit-transition-timing-function: ease-in-out;
   -o-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
+}
+.hover-glow:hover {
+  text-decoration: none;
+  -webkit-box-shadow: 0 0 40px 10px #ffffff87;
+  box-shadow: 0 0 40px 10px #ffffff87;
+  background-color: #ffffff69;
 }
