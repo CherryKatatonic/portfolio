@@ -188,18 +188,23 @@ a:hover {
   transition-duration: 0.4s; }
 
 .icon-btn {
-  padding: 0 12px 0 0; }
+  padding: 0; }
   .icon-btn .icon-container {
-    display: inline-block;
-    width: 48px;
-    padding: 2px;
+    padding: .75rem;
     border-right: 2px solid;
-    margin-right: 12px;
     -webkit-transition-duration: 0.5s;
     -o-transition-duration: 0.5s;
-    transition-duration: 0.5s; }
-    .icon-btn .icon-container img, .icon-btn .icon-container .github-svg {
-      width: 100%;
+    transition-duration: 0.5s; 
+  }
+  .icon-btn .text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    .icon-btn .icon-container img, 
+    .icon-btn .icon-container .github-svg {
+      max-width: 100%;
+      max-height: 5vh;
       -webkit-transition-duration: 0.5s;
       -o-transition-duration: 0.5s;
       transition-duration: 0.5s; }
@@ -316,10 +321,14 @@ a:hover {
   max-width: 90%;
   z-index: 1010; }
   .card .card-title {
-    font-weight: bold; }
+    font-weight: bold;
+  }
   .card .card-img-top {
-    width: 75%;
-    margin: 10px auto auto; }
+    display: block;
+    max-width: 66%;
+    max-height: 25vh;
+    margin: calc(1rem + 2vh) auto;
+  }
 
 .card-about {
   margin: auto;
@@ -469,6 +478,18 @@ a:hover {
 #contact .btn {
   background-color: #010e3ca8;
   color: #fff; }
+
+#contact .card {
+  font-size: calc(1rem + 1vw);
+}
+
+#contact .card .card-title {
+  font-size: calc(1rem + 1vw);
+}
+
+#contact .card .card-footer .btn {
+  font-size: calc(1rem + 1vw);
+}
 
 .svg-alt {
   display: none; }
