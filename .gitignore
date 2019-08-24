@@ -41,3 +41,6 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+### Closure Compiler (for generating js/css source maps)
+compiler.jar

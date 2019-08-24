@@ -6,7 +6,7 @@ $('#contact button').click(function() {
     let tempInput = document.createElement("input");
 
     tempInput.style = "position: absolute; left: -1000px; top: -1000px";
-    tempInput.value = $(this).text();
+    tempInput.value = $(this).attr('data-value')
     document.body.appendChild(tempInput);
     tempInput.select();
     document.execCommand("copy");
