@@ -401,6 +401,10 @@ a:hover {
   }
 }
 
+.static > .card {
+  min-width: 20rem;
+}
+
 .static-main {
   background: #002131fa url(../img/stars.jpeg) no-repeat center fixed;
   background-size: cover;
@@ -505,6 +509,9 @@ a:hover {
   .static-portfolio .card .subtitle {
     font-weight: normal;
     font-style: italic; }
+  .static-portfolio .card ul {
+    padding-left: 5rem;
+  }
   .static-portfolio .card .card-footer {
     border-top: 2px solid #ffffff85; }
   .static-portfolio .card .btn {
