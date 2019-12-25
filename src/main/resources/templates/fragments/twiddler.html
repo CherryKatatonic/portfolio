@@ -11,27 +11,48 @@
                 Twiddler
             </h4>
             <div class="card-text">
-                <h5 class="text-center font-weight-bold">A simple Twitter mock-up made with Javascript</h5>
-                <p class="font-weight-bold mb-0" style="color: #a258b5;">Some of the features of the mock-up include:</p>
-                <ul>
-                    <li>Random twiddle generator to simulate live twiddles</li>
-                    <li>Ability to toggle live feed</li>
-                    <li>Ability to create a username and start twiddling</li>
-                    <li>Ability to filter twiddles by hash tag or user</li>
-                    <li class="list-warning">This mock-up was not built with responsive web design
-                        principles. It is not yet mobile-friendly.</li>
-                </ul>
+                <h5 class="text-center font-weight-bold">A single-page Twitter mock-up</h5>
+                <p class="font-weight-bold mb-0" style="color: #a258b5;">There are two versions of the mock-up:</p>
+                <ol>
+                    <li>
+                        Static JavaScript (Original, Dec 2017)
+                        <ul>
+                            <li>Mock data generator used to simulate live twiddles</li>
+                            <li>Ability to toggle live feed</li>
+                            <li>Ability to create a username and start twiddling</li>
+                            <li>Ability to filter twiddles by hash tag or user</li>
+                        </ul>
+                    </li>
+                    <li>
+                        React, Spring Boot, MySQL (Rebuild, Dec 2019)
+                        <ul>
+                            <li>React front-end | Mobile responsive | Infinite scrolling</li>
+                            <li>Spring Boot REST API with Spring Security</li>
+                            <li>Data persistence with MySQL, Hibernate</li>
+                        </ul>
+                    </li>
+                </ol>
             </div>
         </div>
         <div class="card-footer" style="border-top: 2px solid #ad65c09e;">
             <div class="row justify-content-center">
-                <a href="twiddler/index.html" target="_blank" class="btn icon-btn col m-1">
+                <a href="/twiddler/index.html" target="_blank" class="btn icon-btn col m-1">
                     <div class="row">
                         <div class="col-md-3 col-4 icon-container">
-                            <img src="twiddler/twiddle.jpg">
+                            <img src="/twiddler/images/twiddle.jpg">
                         </div>
                         <div class="col-md-9 col-8 text-container">
-                            See Twiddler
+                            See Original
+                        </div>
+                    </div>
+                </a>
+                <a href="https://twiddler.katgrennan.com" target="_blank" class="btn icon-btn col m-1">
+                    <div class="row">
+                        <div class="col-md-3 col-4 icon-container">
+                            <img src="twiddler/images/twiddle.jpg">
+                        </div>
+                        <div class="col-md-9 col-8 text-container">
+                            See Rebuild
                         </div>
                     </div>
                 </a>
