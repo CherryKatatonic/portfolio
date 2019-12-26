@@ -95,6 +95,7 @@ hr.white {
 }
 .bg-cover:after {
   background: #002131fa url(../img/cover.jpg) no-repeat center;
+  box-shadow: inset 0 0 20rem 0 #000000;
 }
 
 .bg-stars::after {
@@ -103,6 +104,7 @@ hr.white {
 
 .bg-about::after {
   background: #002131fa url(../img/about.png) no-repeat center;
+  box-shadow: inset 0 0 20rem 0 #002f46;
 }
 
 .list-warning {
@@ -191,6 +193,21 @@ h6 {
   width: 100%;
 }
 
+@media (max-width: 576px) {
+  .card-footer > .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-footer > .row > .col {
+    flex-basis: auto;
+  }
+}
+@media (min-width: 460px) {
+  .card-footer > .row > .col {
+    max-width: 66%;
+  }
+}
 .wide {
   width: 100%;
 }
@@ -225,31 +242,45 @@ a:hover {
 .btn {
   font-weight: 700 !important;
   border: 2px solid #fff;
+  white-space: normal;
+  word-wrap: normal;
   -webkit-transition-duration: 0.4s;
   -o-transition-duration: 0.4s;
   transition-duration: 0.4s;
   /* Safari */
-  transition-duration: 0.4s;
 }
 
+@media (min-width: 576px) {
+  .static .card .btn {
+    max-width: 66%;
+  }
+}
 .icon-btn {
-  padding: 0 12px 0 0;
+  padding: 0;
 }
 .icon-btn .icon-container {
-  display: inline-block;
-  width: 48px;
-  padding: 2px;
+  padding: 0.75rem;
   border-right: 2px solid;
-  margin-right: 12px;
   -webkit-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-.icon-btn .icon-container img, .icon-btn .icon-container .github-svg {
-  width: 100%;
+.icon-btn .icon-container img, .icon-btn .icon-container svg {
+  max-width: 100%;
+  max-height: 6vh;
+  min-height: 2rem;
   -webkit-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
+}
+.icon-btn .text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.static .card .icon-container {
+  padding: 0.5rem;
 }
 
 /* Navs */
@@ -330,6 +361,7 @@ a:hover {
 
 .bg-mchistory:after {
   background: #002131fa url(../img/mchistory.png) no-repeat center;
+  box-shadow: inset 0 0 10rem 0 #6b4c00;
 }
 .bg-mchistory .cover {
   background-color: #e4c871e3;
@@ -340,6 +372,7 @@ a:hover {
 
 .bg-twiddler:after {
   background: #002131fa url(../img/twiddler.png) no-repeat center;
+  box-shadow: inset 0 0 10rem 0 #49035d;
 }
 .bg-twiddler .cover {
   background-color: #ad65c0e3;
@@ -350,6 +383,7 @@ a:hover {
 
 .bg-cisd:after {
   background: #002131fa url(../img/cisd.png) no-repeat center;
+  box-shadow: inset 0 0 10rem 0 #000000;
 }
 .bg-cisd .cover {
   background-color: #f3c029ba;
@@ -360,6 +394,7 @@ a:hover {
 
 .bg-portfolio:after {
   background: #002131fa url(../img/cover.jpg) no-repeat center;
+  box-shadow: inset 0 0 20rem 0 #000000;
 }
 .bg-portfolio .cover {
   background-color: #06183873;
@@ -382,7 +417,7 @@ a:hover {
   background-color: #010e3cf7;
   /* night theme */
   border: 0;
-  max-width: 90%;
+  max-width: 75%;
   z-index: 1010;
 }
 .card .card-title {
@@ -392,7 +427,18 @@ a:hover {
   width: 75%;
   margin: 10px auto auto;
 }
+.card .card-body img {
+  display: block;
+  max-width: 66%;
+  max-height: 25vh;
+  margin: calc(1rem + 2vh) auto;
+}
 
+@media (max-width: 992px) {
+  .card {
+    max-width: 90%;
+  }
+}
 .card-about {
   margin: auto;
   background-color: #010e3ca8;
@@ -419,9 +465,19 @@ a:hover {
   height: 50vh;
 }
 
+@media (max-width: 576px) {
+  .static {
+    height: 100vh;
+  }
+}
+.static > .card {
+  min-width: 20rem;
+}
+
 .static-main {
   background: #002131fa url(../img/stars.jpeg) no-repeat center fixed;
   background-size: cover;
+  box-shadow: inset 0 0 10rem 0 #000000;
 }
 
 /* TODO - add .subtitle class for cards */
@@ -501,7 +557,6 @@ a:hover {
   background-color: #000000de !important;
   color: #ffffffba;
   border: 2px solid #f3c029;
-  max-width: 75%;
 }
 .static-cisd .card .card-title {
   color: #f3c029e8;
@@ -540,6 +595,9 @@ a:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   text-shadow: 0 0 1px #7e9ba98f;
 }
+.static-portfolio .card ul {
+  padding-left: 5rem;
+}
 .static-portfolio .card .card-title {
   border-bottom: 2px solid #ffffff85;
   font-style: italic;
@@ -576,11 +634,30 @@ a:hover {
   fill: #fff;
 }
 
+@media (max-width: 360px) {
+  #contact > .row {
+    width: 100% !important;
+  }
+}
 #contact .btn {
   background-color: #010e3ca8;
   color: #fff;
 }
+#contact .card {
+  font-size: 1.25rem;
+}
+#contact .card .card-title {
+  font-size: 1.5rem;
+}
+#contact .card .card-footer .btn {
+  font-size: 1.25rem;
+}
 
+@media (min-width: 992px) {
+  #contact .card .card-footer .btn {
+    max-width: 66%;
+  }
+}
 .svg-alt {
   display: none;
 }
