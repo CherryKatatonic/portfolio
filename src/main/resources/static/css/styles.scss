@@ -403,6 +403,10 @@ a:hover {
   }
 }
 
+.skill-icon {
+  width: 3rem;
+}
+
 @media (max-width: 992px) {
   .card {
     max-width: 90%;
@@ -412,9 +416,7 @@ a:hover {
 .card-about {
   margin: auto;
   background-color: #010e3ca8;
-  .skill-icon {
-    width: 3rem;
-  }
+  max-width: 90%;
   .avatar {
     position: relative;
     top: -17vw;
