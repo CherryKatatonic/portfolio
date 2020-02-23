@@ -330,6 +330,11 @@ a:hover {
     margin: calc(1rem + 2vh) auto;
   }
 
+  .skill-icon {
+    width: 5rem;
+    padding: .5rem;
+  }
+
 .card-about {
   margin: auto;
   background-color: #010e3ca8; }
