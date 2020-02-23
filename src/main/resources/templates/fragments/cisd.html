@@ -14,36 +14,46 @@
                 <h5 class="text-center font-weight-bold" style="color: #f3c029e8;">New website for the Corsicana ISD</h5>
                 <p class="font-weight-bold mb-0">Some of the technologies/features of the site include:</p>
                 <ul>
-                    <li>All of the features and technologies of MC History</li>
                     <li>Built with WAI-ARIA accessibility standards in mind</li>
-                    <li>Custom iCalendar API built with Biweekly(Java) and FullCalendar(JavaScript)</li>
-                    <li>The current cisd.org uses a templating engine enabling site admins to create/edit/delete
-                        pages and page contents on the site. I intend to implement this with Spring and Thymeleaf.</li>
-                    <li class="list-warning">This website is still under construction. It's a large and complex
-                        project that will take time to complete.</li>
+                    <li>Custom iCalendar API built with Biweekly (Java) and FullCalendar (JavaScript)</li>
+                    <li><em>(future version)</em> Templating engine enabling site admins to
+                        create/edit/delete pages and content on the site.</li>
+                    <li class="list-warning">Construction of the site is not yet completed.</li>
                 </ul>
             </div>
         </div>
         <div class="card-footer" style="border-top: 2px solid #f3c02994;">
             <div class="row justify-content-center">
-                <a href="https://cisd.org" target="_blank" class="btn icon-btn col-auto m-1">
-                    <div class="icon-container">
-                        <img src="img/blackboard-icon.png">
+                <a href="https://www.cisd.org" target="_blank" class="btn icon-btn col m-1">
+                    <div class="row">
+                        <div class="col-md-3 col-4 icon-container">
+                            <img src="img/blackboard-icon.png">
+                        </div>
+                        <div class="col-md-9 col-8 text-container">
+                            See cisd.org
+                        </div>
                     </div>
-                    See the current cisd.org
                 </a>
-                <a href="https://cisd.kat-grennan.com" target="_blank" class="btn icon-btn col-auto m-1">
-                    <div class="icon-container">
-                        <img src="img/cisd-icon.png">
+                <a href="https://cisd.katgrennan.com" target="_blank" class="btn icon-btn col m-1">
+                    <div class="row">
+                        <div class="col-md-3 col-4 icon-container">
+                            <img src="img/cisd-icon.png">
+                        </div>
+                        <div class="col-md-9 col-8 text-container">
+                            See my prototype
+                        </div>
                     </div>
-                    See my prototype
                 </a>
-                <a href="https://github.com/CherryKatatonic/cisd" target="_blank" class="btn icon-btn col-auto m-1">
-                    <div class="icon-container">
-                        <svg th:replace="fragments/vectors :: github"></svg>
-                        <img class="svg-alt" src="img/github.svg">
+                <a href="https://github.com/CherryKatatonic/cisd" target="_blank" class="btn icon-btn col m-1">
+                    <div class="row">
+                        <div class="col-md-3 col-4 icon-container">
+                            <svg th:replace="fragments/vectors :: github"></svg>
+                            <img class="svg-alt" src="img/github.svg">
+                        </div>
+                        <div class="col-md-9 col-8 text-container">
+                            Code Repo
+                        </div>
                     </div>
-                    Code Repo
                 </a>
             </div>
         </div>
