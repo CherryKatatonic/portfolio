@@ -1,34 +1,48 @@
 <section class="section parallax bg-portfolio">
     <div class="cover text-center">
-        <h1 class="cover-text text-shadow-main">and of course...</h1>
+        <h1 class="cover-text text-shadow-main">KatGrennan.com</h1>
     </div>
 </section>
 
-<section class="section static static-portfolio" style="height: 25vh;">
+<section class="section static static-portfolio"> <!--style="height: 25vh;"-->
     <div class="card">
         <div class="card-body">
             <h4 class="card-title text-center pb-1">
-                Kat-Grennan.com
+                KatGrennan.com
             </h4>
             <div class="card-text">
-                <h5 class="subtitle text-center">My webdev/coding portfolio</h5>
+                <h5 class="subtitle text-center">My dev portfolio</h5>
                 <ul>
                     <li>Parallax scrolling</li>
                     <li>Spring Boot</li>
                     <li>Thymeleaf</li>
-                    <li>Sass</li>
-                    <li class="list-warning">Still needs cross-browser compatibility fixes</li>
+                    <li>and a little bit of Sass</li>
+                </ul>
+                <h4>DevOps:</h4>
+                <ul>
+                    <li>2 domains, 4 subdomains, 1 server</li>
+                    <li>Java Servlet apps running on Tomcat virtual hosts</li>
+                    <li>Spring Boot apps running embedded Tomcat instances</li>
+                    <li>React app running on static HTTP server</li>
+                    <li>Apache HTTPS reverse-proxy gateway</li>
+                    <li>Local and remote databases | relational and non-relational</li>
+                    <li>Secure connections enforced by LetsEncrypt SSL/TLS certificates</li>
+                    <li>Server administrated with security best practices</li>
                 </ul>
             </div>
         </div>
         <div class="card-footer">
             <div class="row justify-content-center">
-                <a href="https://github.com/CherryKatatonic/portfolio" target="_blank" class="btn icon-btn col-auto m-1">
-                    <div class="icon-container">
-                        <svg th:replace="fragments/vectors :: github"></svg>
-                        <img class="svg-alt" src="img/github.svg">
+                <a href="https://github.com/CherryKatatonic/portfolio" target="_blank" class="btn icon-btn col m-1">
+                    <div class="row">
+                        <div class="col-md-3 col-4 icon-container">
+                            <svg th:replace="fragments/vectors :: github"></svg>
+                            <img class="svg-alt" src="img/github.svg">
+                        </div>
+                        <div class="col-md-9 col-8 text-container">
+                            Code Repo
+                        </div>
                     </div>
-                    Code Repo
                 </a>
             </div>
         </div>
