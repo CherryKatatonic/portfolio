@@ -439,6 +439,12 @@ a:hover {
   padding: .5rem;
 }
 
+.skill-icon:hover,
+.skill-icon:focus,
+.skill-icon:active {
+  background-color: #ffffff50;
+}
+
 @media (max-width: 992px) {
   .card {
     max-width: 90%;
