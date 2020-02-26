@@ -9,11 +9,34 @@ if (agent.browser.family === 'Safari') {
   })
 }
 
+// Prevent about/skills section header background from overlapping portrait image
+adjustForFF();
+
 // Prevent parallax from blocking skill icon links in Firefox when window is less than 500px wide
-if (agent.browser.family === 'Firefox' && document.body.clientWidth < 500) {
-  jss.set('.bg-about', {
-    'z-index': '2'
-  })
+adjustForFFSmall();
+
+window.onresize = function(e) {
+  adjustForFFSmall();
+}
+
+function adjustForFF() {
+  if (agent.browser.family === 'Firefox') {
+    jss.set('#skills', {
+      'margin-bottom': '8rem'
+    })
+  }
+}
+
+function adjustForFFSmall() {
+  if (agent.browser.family === 'Firefox' && document.body.clientWidth < 500) {
+    jss.set('.bg-about', {
+      'z-index': '2'
+    })
+  } else {
+    jss.set('.bg-about', {
+      'z-index': '0'
+    })
+  }
 }
 
 // Initialize tooltips for skill icon links
@@ -21,7 +44,8 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
-// [Browser/Device Info]
+// [Browser/Device Info] (Dev only) - useful debugging info
+//
 // console.log('Browser Family:', agent.browser.family);
 // console.log('Browser Name:', agent.browser.name);
 
