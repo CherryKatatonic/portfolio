@@ -13,10 +13,10 @@ if (agent.browser.family === 'Safari') {
 adjustForFF();
 
 // Prevent parallax from blocking skill icon links in Firefox when window is less than 500px wide
-adjustForFFSmall();
+adjustForMobile();
 
 window.onresize = function(e) {
-  adjustForFFSmall();
+  adjustForMobile();
 }
 
 function adjustForFF() {
@@ -27,8 +27,8 @@ function adjustForFF() {
   }
 }
 
-function adjustForFFSmall() {
-  if (agent.browser.family === 'Firefox' && document.body.clientWidth < 500) {
+function adjustForMobile() {
+  if (document.body.clientWidth < 500) {
     jss.set('.bg-about', {
       'z-index': '2'
     })
